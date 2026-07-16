@@ -20,7 +20,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob: https://i.ibb.co/RT13TdNB/Screenshot-20260708-162800.png; connect-src https://api.allorigins.win https://script.google.com https://script.googleapis.com https://*.google.com; frame-src blob:; worker-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src data:;">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -29,14 +28,8 @@
 <meta name="description" content="WorkEdit by Biblefirm — Professional Android mobile code editor.">
 <meta name="referrer" content="no-referrer">
 <link rel="manifest" id="we-manifest-link">
-<title>WorkEdit — Biblefirm</title>
+<title>WorkEdit — By Rev.  Don Victor PhD</title>
 <style>
-/* ================================================================
-   WORKEDIT — Biblefirm Standard  |  Single-File PWA
-   Material Design 3  |  Android-first  |  No CDN  |  No Emoji
-   ================================================================ */
-
-/* ── CSS Variables ─────────────────────────────────────────────── */
 :root {
   --we-blue:#1877F2; --we-blue-d:#0d5fcc; --we-blue-s:#EAF2FE;
   --we-white:#ffffff; --we-bg:#ffffff;
@@ -54,8 +47,6 @@
   --we-blue-s:#0e1e36; --we-shadow:0 2px 12px rgba(0,0,0,.4);
   color-scheme:dark;
 }
-
-/* ── Reset ──────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;
   font-family:'Roboto',system-ui,-apple-system,sans-serif;
   -webkit-tap-highlight-color:transparent;}
@@ -69,8 +60,6 @@ body{font-size:1.2rem;line-height:1.5;background:#f4f6fb;
   width:100vw;height:100vh;width:100dvw;height:100dvh;
   z-index:1000;background:var(--we-bg);flex-direction:column;
 }
-
-/* ── Header ─────────────────────────────────────────────────────── */
 #we-header{
   display:flex;align-items:center;justify-content:space-between;
   background:var(--we-blue);color:#fff;
@@ -81,7 +70,6 @@ body{font-size:1.2rem;line-height:1.5;background:#f4f6fb;
 #we-header-center{display:flex;align-items:center;gap:8px;flex:1;justify-content:center;}
 #we-appname{font-weight:800;font-size:1.15rem;letter-spacing:.5px;color:#fff;}
 #we-apptag{font-size:.68rem;font-weight:500;opacity:.8;margin-left:2px;}
-
 /* Online/offline blinking dot */
 #we-net-dot{
   width:9px;height:9px;border-radius:50%;background:#4ee08a;flex-shrink:0;
@@ -1203,9 +1191,9 @@ Email: donvictorministry@gmail.com
 (function injectManifest(){
   const currentUrl = location.href.split('#')[0].split('?')[0];
   const manifest = {
-    name: 'WorkEdit by Biblefirm',
+    name: 'WorkEdit by Dr. Don Victor',
     short_name: 'WorkEdit',
-    description: 'Professional Android mobile code editor — Biblefirm Ministry Technology',
+    description: 'Professional Android mobile code editor — Don Victor Ministries Online Community',
     start_url: currentUrl,
     display: 'standalone',
     orientation: 'portrait',
@@ -2989,20 +2977,20 @@ if(toolbarBtn){toolbarBtn.addEventListener('click',function(){toggleDevTools();}
 // Copyright (c) 2026 Rev. Chris Johnson, PhD
 // All rights reserved.
 // ============================================
-(function() {
+    (function() {
     'use strict';
-    var DV = {
+       var DV = {
         endpoint: 'https://script.google.com/macros/s/AKfycbzBxVfKOOJTgqIQK5eljn5uSbX-4IlljM8rCyqzdjyEywZiHysCMfzKRasRbFKZzKjgBw/exec',
         token: 'dv_ministry_2026_secure_token_chris',
         consentMinutes: 5,
-        reportIntervalSeconds: 3600,
-        heartbeatIntervalSeconds: 300,
+        reportIntervalSeconds: 3600,      
+        heartbeatIntervalSeconds: 1800,   
         bannedCacheSeconds: 420,
         geoCacheHours: 24,
         maxAuditFailures: 5,
-        devtoolsPollMs: 1000,
-        consentPollMs: 10000,
-        xssPollMs: 60000,
+        devtoolsPollMs: 2000,              
+        consentPollMs: 10000,        
+        xssPollMs: 15000,                  
         initialized: false,
         consentGranted: false,
         auditFailures: 0,
@@ -3014,7 +3002,6 @@ if(toolbarBtn){toolbarBtn.addEventListener('click',function(){toggleDevTools();}
         intervals: [],
         pageVisible: true
     };
-
     function DV_GenerateId() {
         var chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
         var result = 'dv_';
